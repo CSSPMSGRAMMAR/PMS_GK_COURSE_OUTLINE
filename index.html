@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMS GK Complete Outline | CSSPMS.GRAMMAR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            -webkit-print-color-adjust: exact;
+        }
+        h1, h2, h3, h4, .serif-font {
+            font-family: 'Merriweather', serif;
+        }
+        
+        /* Custom Scrollbar for better mobile experience */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        /* Print Specifics */
+        @media print {
+            body { background: white; }
+            .no-print { display: none !important; }
+            .shadow-xl { box-shadow: none !important; }
+            .print-break-inside { break-inside: avoid; }
+            .container-width { max-width: 100% !important; margin: 0 !important; }
+        }
+    </style>
+</head>
+<body class="py-4 md:py-8 print:py-0">
+
+    <!-- Floating Print Button -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 no-print z-50">
+        <button onclick="window.print()" class="bg-slate-800 text-white p-4 rounded-full shadow-lg hover:bg-slate-700 transition-transform hover:scale-105" title="Save as PDF">
+            <i class="fas fa-print text-xl"></i>
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container-width max-w-[210mm] mx-auto bg-white shadow-xl min-h-screen relative overflow-hidden">
+        
+        <!-- Header Section -->
+        <header class="text-center border-b-4 border-slate-800 relative bg-white">
+            <!-- Top Strip -->
+            <div class="bg-slate-900 text-white py-2 text-xs md:text-sm tracking-widest uppercase flex flex-col md:flex-row justify-between px-4 md:px-8 items-center gap-2">
+                <span>PMS Punjab Exclusive Session</span>
+                <span class="font-mono text-yellow-400 font-semibold">Online &amp; Recorded Classes Available</span>
+            </div>
+
+            <div class="p-6 md:p-10 pb-6">
+                <!-- Academy Logo -->
+                <div class="flex justify-center mb-4">
+                    <img src="https://raw.githubusercontent.com/CSSPMSGRAMMAR/LinkTree/main/Images/AcademyLogo.PNG" alt="Academy Logo" class="h-24 md:h-28 w-auto object-contain shadow-lg rounded-full bg-white p-1">
+                </div>
+
+                <!-- Urdu Quote -->
+                <p class="text-slate-500 text-sm mb-4 urdu-font font-bold">"علم بڑی طاقت ہے"</p>
+                
+                <!-- Course Title -->
+                <div class="inline-block border-y-2 border-slate-800 py-3 px-4 md:px-12 my-4 bg-slate-50">
+                    <h2 class="text-xl md:text-3xl font-bold uppercase tracking-wide text-slate-900">PMS Punjab – General Knowledge</h2>
+                    <p class="text-sm md:text-base text-slate-600 italic mt-1">Complete Concept-to-Command Course Outline</p>
+                </div>
+
+                <!-- Instructor Section -->
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-6">
+                    <!-- Female Placeholder Photo -->
+                    <div class="w-16 h-16 rounded-full bg-slate-100 overflow-hidden border-2 border-slate-300 flex items-center justify-center">
+                        <i class="fas fa-person-dress text-3xl text-slate-400"></i>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <p class="text-xs uppercase text-slate-500 font-bold tracking-wider">Instructor</p>
+                        <h3 class="text-xl font-bold text-slate-800 serif-font">Mam Nimra Khan</h3>
+                        <p class="text-xs text-slate-500 italic font-medium bg-slate-100 inline-block px-2 py-0.5 rounded mt-1">CSS / PMS Mentor</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="p-6 md:p-12">
+            
+            <!-- Session Overview -->
+            <section class="mb-10 bg-slate-50 p-6 rounded-lg border border-slate-200 print-break-inside">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 border-l-4 border-slate-800 pl-3 uppercase">Session Overview</h3>
+                <p class="text-sm text-slate-700 italic mb-6">
+                    This course is designed to remove confusion, build confidence, and align your preparation exactly with the evolving PMS Punjab GK pattern.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-clock text-slate-600 mt-1"></i>
+                        <div>
+                            <span class="font-bold text-slate-900 block">Course Duration</span>
+                            <span class="text-slate-600">One Month</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-calendar-check text-slate-600 mt-1"></i>
+                        <div>
+                            <span class="font-bold text-slate-900 block">Class Frequency</span>
+                            <span class="text-slate-600">Daily interactive sessions</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-video text-slate-600 mt-1"></i>
+                        <div>
+                            <span class="font-bold text-slate-900 block">Mode of Delivery</span>
+                            <span class="text-slate-600">Live Zoom classes + Recordings</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-book text-slate-600 mt-1"></i>
+                        <div>
+                            <span class="font-bold text-slate-900 block">Study Support</span>
+                            <span class="text-slate-600">Reference books shared daily</span>
+                        </div>
+                    </div>
+                    <div class="col-span-1 md:col-span-2 flex items-start gap-3 bg-white p-3 rounded border border-slate-200">
+                        <i class="fas fa-clipboard-check text-slate-600 mt-1"></i>
+                        <div>
+                            <span class="font-bold text-slate-900 block">Assessment & Practice</span>
+                            <span class="text-slate-600">Regular mock testing and extensive solved past-paper discussions to develop examiner-oriented answers.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Subject-Wise Syllabus -->
+            <section>
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="h-1 flex-grow bg-slate-200"></div>
+                    <h2 class="text-2xl font-bold text-slate-800 uppercase tracking-widest text-center">Subject-Wise Coverage</h2>
+                    <div class="h-1 flex-grow bg-slate-200"></div>
+                </div>
+
+                <!-- Current Affairs -->
+                <div class="mb-8 print-break-inside">
+                    <div class="flex items-baseline gap-3 mb-2">
+                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
+                        <h3 class="text-lg font-bold text-slate-800 serif-font">1. Current Affairs</h3>
+                    </div>
+                    <p class="text-sm text-slate-500 italic mb-3 ml-5">A focused and analytical approach to national and international developments.</p>
+                    <ul class="ml-5 space-y-2 text-sm text-slate-700 list-disc list-outside pl-4 marker:text-slate-400">
+                        <li>Pakistan’s economic, political, and social challenges (water scarcity, governance, cyber laws).</li>
+                        <li>Pakistan’s relations with neighboring states, the Muslim world, and major global powers.</li>
+                        <li>International and regional organizations with their roles and relevance.</li>
+                        <li>Contemporary global issues: Peace/security, terrorism, climate change, food/energy crises, SDGs.</li>
+                        <li>Regional conflicts including Kashmir and Middle East dynamics.</li>
+                        <li>Globalization, non-state actors, NGOs, and INGOs.</li>
+                        <li>Cultural awareness including sports, literature, and arts.</li>
+                    </ul>
+                </div>
+
+                <!-- History -->
+                <div class="mb-8 print-break-inside">
+                    <div class="flex items-baseline gap-3 mb-2">
+                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
+                        <h3 class="text-lg font-bold text-slate-800 serif-font">2. History: Pre & Post Partition</h3>
+                    </div>
+                    <p class="text-sm text-slate-500 italic mb-3 ml-5">A smooth conceptual journey from early Islamic history to modern Pakistan.</p>
+                    <div class="ml-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-slate-50 p-4 rounded border-l-4 border-slate-400">
+                            <h4 class="font-bold text-sm text-slate-800 mb-2">Pre-Partition</h4>
+                            <ul class="text-sm text-slate-700 space-y-1 list-disc list-inside marker:text-slate-400">
+                                <li>Muslim rule in Subcontinent</li>
+                                <li>War of Independence</li>
+                                <li>Freedom Movement developments</li>
+                                <li>Key political milestones</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded border-l-4 border-slate-800">
+                            <h4 class="font-bold text-sm text-slate-800 mb-2">Post-Partition</h4>
+                            <ul class="text-sm text-slate-700 space-y-1 list-disc list-inside marker:text-slate-400">
+                                <li>Post-independence political evolution</li>
+                                <li>Governance phases</li>
+                                <li>Constitutional development</li>
+                                <li>Comparative analysis of Amendments</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Pakistan History Visual -->
+                    <div class="mt-4 ml-0 md:ml-5 px-2 flex justify-center">
+                        <a href="https://github.com/CSSPMSGRAMMAR/LinkTree" target="_blank" rel="noopener noreferrer" class="inline-block">
+                            <img src="picture1.png" alt="Pakistan History Timeline" class="w-full max-w-md md:max-h-64 h-auto rounded-lg shadow-md border border-slate-200 object-contain">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Geography -->
+                <div class="mb-8 print-break-inside">
+                    <div class="flex items-baseline gap-3 mb-2">
+                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
+                        <h3 class="text-lg font-bold text-slate-800 serif-font">3. Geography of Pakistan</h3>
+                    </div>
+                    <p class="text-sm text-slate-500 italic mb-3 ml-5">Geography taught as a scoring subject, not memorization.</p>
+                    <ul class="ml-5 space-y-2 text-sm text-slate-700 list-disc list-outside pl-4 marker:text-slate-400">
+                        <li>Physical features: Mountains, rivers, dams, passes, and climate zones.</li>
+                        <li>Borders, strategic location, and natural resources.</li>
+                        <li>Infrastructure development with emphasis on connectivity.</li>
+                    </ul>
+                </div>
+
+                <!-- Two Column Section for Sciences -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 print-break-inside">
+                    
+                    <!-- Physical Sciences -->
+                    <div>
+                        <div class="flex items-baseline gap-3 mb-2">
+                            <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
+                            <h3 class="text-lg font-bold text-slate-800 serif-font">4. Physical Sciences</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 italic mb-3 ml-5">Simple, exam-oriented explanation.</p>
+                        <ul class="ml-5 space-y-1 text-sm text-slate-700 list-disc list-outside pl-4 marker:text-slate-400">
+                            <li>Universe, astronomy, space terminology.</li>
+                            <li>Natural disasters & risk management.</li>
+                            <li>Energy resources and sustainability.</li>
+                            <li>Core physics and chemistry concepts.</li>
+                            <li>Minerals and mining in Pakistan.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Biological Sciences -->
+                    <div>
+                        <div class="flex items-baseline gap-3 mb-2">
+                            <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
+                            <h3 class="text-lg font-bold text-slate-800 serif-font">5. Biological Sciences</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 italic mb-3 ml-5">Practical understanding of life sciences.</p>
+                        <ul class="ml-5 space-y-1 text-sm text-slate-700 list-disc list-outside pl-4 marker:text-slate-400">
+                            <li>Cell structure & biological processes.</li>
+                            <li>Bio-molecules and enzymes.</li>
+                            <li>Plant and animal life.</li>
+                            <li>Human anatomy and organ systems.</li>
+                            <li>Diseases, vitamins, vaccines.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Environment & Food -->
+                <div class="mb-8 print-break-inside">
+                    <div class="flex items-baseline gap-3 mb-2">
+                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
+                        <h3 class="text-lg font-bold text-slate-800 serif-font">6. Environment & Food Sciences</h3>
+                    </div>
+                    <ul class="ml-5 space-y-2 text-sm text-slate-700 list-disc list-outside pl-4 marker:text-slate-400">
+                        <li>Ecosystems, biodiversity, climate change, pollution, and ozone depletion.</li>
+                        <li>International environmental conventions and agreements.</li>
+                        <li>Food science: Nutrition, preservation, adulteration, and global hunger.</li>
+                    </ul>
+                </div>
+
+                <!-- CS & IT -->
+                <div class="mb-8 print-break-inside">
+                    <div class="flex items-baseline gap-3 mb-2">
+                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
+                        <h3 class="text-lg font-bold text-slate-800 serif-font">7. Computer Science & IT</h3>
+                    </div>
+                    <div class="ml-5 flex flex-wrap gap-2 text-sm">
+                        <span class="bg-slate-100 px-3 py-1 rounded text-slate-700 border border-slate-200">Hardware & Software</span>
+                        <span class="bg-slate-100 px-3 py-1 rounded text-slate-700 border border-slate-200">Office Tools</span>
+                        <span class="bg-slate-100 px-3 py-1 rounded text-slate-700 border border-slate-200">Networking & Social Media</span>
+                        <span class="bg-slate-100 px-3 py-1 rounded text-slate-700 border border-slate-200">Telecommunication (GPS/Fiber)</span>
+                    </div>
+                </div>
+
+                <!-- Mathematics -->
+                <div class="mb-8 print-break-inside">
+                    <div class="flex items-baseline gap-3 mb-2">
+                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
+                        <h3 class="text-lg font-bold text-slate-800 serif-font">8. Basic Mathematics & Logic</h3>
+                    </div>
+                    <p class="text-sm text-slate-500 italic mb-3 ml-5">Confidence-building numerical skills with smart shortcuts.</p>
+                    <ul class="ml-5 space-y-2 text-sm text-slate-700 list-disc list-outside pl-4 marker:text-slate-400">
+                        <li>Arithmetic, algebra, geometry, and percentages.</li>
+                        <li>Analytical and logical reasoning.</li>
+                        <li>Mental math techniques for speed and accuracy.</li>
+                        <li>Introductory statistics.</li>
+                    </ul>
+                </div>
+
+                <!-- GK Wrap Up -->
+                <div class="mb-8 print-break-inside">
+                    <div class="flex items-baseline gap-3 mb-2">
+                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
+                        <h3 class="text-lg font-bold text-slate-800 serif-font">9. General Knowledge Wrap-Up</h3>
+                    </div>
+                    <div class="ml-5 bg-yellow-50 p-4 border border-yellow-200 rounded text-slate-700 text-sm">
+                        <ul class="list-disc list-inside marker:text-yellow-600">
+                            <li>Renowned scientists and inventors.</li>
+                            <li>Major discoveries, laws, and theories.</li>
+                            <li>Measurement units and scientific instruments.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <!-- Footer: Why This Course Works -->
+        <footer class="bg-slate-900 text-white p-6 md:p-12 print:bg-slate-900 print:text-white">
+            <div class="border-b border-slate-700 pb-8 mb-8">
+                <h3 class="text-2xl font-bold mb-4 serif-font text-yellow-500">Why This Course Works</h3>
+                <p class="text-slate-300 leading-relaxed text-sm md:text-base">
+                    This program is not about cramming facts — it’s about understanding patterns, mastering concepts, and answering like a PMS qualifier. Whether you’re starting fresh or restructuring your preparation, this course is built to make you feel prepared, confident, and in control.
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <p class="text-xs uppercase tracking-widest text-slate-500 mb-1">Registration &amp; Queries</p>
+                    <p class="text-slate-300 text-sm md:text-base">Reach out via official channels for enrollment details.</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-slate-400 text-sm">© 2025 CSSPMS.GRAMMAR</p>
+                    <p class="text-xs text-slate-600">All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
