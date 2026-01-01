@@ -1,345 +1,985 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMS GK Complete Outline | CSSPMS.GRAMMAR</title>
+    <title>Master PMS Punjab GK in 30 Days | CSSPMS.GRAMMAR</title>
+    <meta name="description"
+        content="Transform your PMS Punjab General Knowledge preparation with Mam Nimra Khan's examiner-oriented course. Live sessions, recordings, solved past papers & complete syllabus coverage.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        accent: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body {
-            font-family: 'Lato', sans-serif;
-            background-color: #f8fafc;
-            color: #334155;
+            font-family: 'Inter', system-ui, sans-serif;
             -webkit-print-color-adjust: exact;
+            scroll-behavior: smooth;
         }
-        h1, h2, h3, h4, .serif-font {
-            font-family: 'Merriweather', serif;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-serif {
+            font-family: 'Playfair Display', Georgia, serif;
         }
-        
-        /* Custom Scrollbar for better mobile experience */
+
+        /* Animations */
+        @keyframes pulse-slow {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        .animate-pulse-slow {
+            animation: pulse-slow 2s ease-in-out infinite;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #0f766e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Card hover effects */
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
+
         ::-webkit-scrollbar-track {
-            background: #f1f1f1;
+            background: #f1f5f9;
         }
+
         ::-webkit-scrollbar-thumb {
-            background: #888;
+            background: #94a3b8;
             border-radius: 4px;
         }
 
-        /* Print Specifics */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+        /* Print styles */
         @media print {
-            body { background: white; }
-            .no-print { display: none !important; }
-            .shadow-xl { box-shadow: none !important; }
-            .print-break-inside { break-inside: avoid; }
-            .container-width { max-width: 100% !important; margin: 0 !important; }
+            body {
+                background: white;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .print-break-inside {
+                break-inside: avoid;
+            }
+
+            .shadow-xl,
+            .shadow-lg,
+            .shadow-md {
+                box-shadow: none !important;
+            }
+
+            .container-width {
+                max-width: 100% !important;
+                margin: 0 !important;
+            }
+
+            .bg-gradient-to-br,
+            .bg-gradient-to-r {
+                background: #f8fafc !important;
+            }
+
+            .sticky {
+                position: relative !important;
+            }
+        }
+
+        /* Focus states for accessibility */
+        button:focus-visible,
+        a:focus-visible {
+            outline: 3px solid #14b8a6;
+            outline-offset: 2px;
         }
     </style>
 </head>
-<body class="py-4 md:py-8 print:py-0">
+
+<body class="bg-slate-50 text-slate-700">
+
+    <!-- Sticky Top Navigation (Desktop) -->
+    <nav class="hidden md:block fixed top-0 left-0 right-0 z-50 glass border-b border-slate-200/50 no-print">
+        <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+            <a href="https://csspmsgrammar.github.io/LinkTree/" target="_blank" class="flex items-center gap-3 group">
+                <img src="https://raw.githubusercontent.com/CSSPMSGRAMMAR/LinkTree/main/Images/AcademyLogo.PNG"
+                    alt="CSSPMS.GRAMMAR Logo"
+                    class="h-10 w-10 rounded-full shadow-sm group-hover:scale-105 transition-transform">
+                <span class="font-serif font-bold text-slate-800 text-lg">CSSPMS.GRAMMAR</span>
+            </a>
+            <div class="flex items-center gap-4">
+                <a href="#demo"
+                    class="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors">Watch Demo</a>
+                <a href="#syllabus"
+                    class="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors">Syllabus</a>
+                <a href="#register"
+                    class="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold px-5 py-2.5 rounded-lg shadow-lg shadow-accent-500/25 transition-all hover:scale-105">
+                    <i class="fas fa-graduation-cap"></i>
+                    Register for Free Demo
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sticky Bottom CTA -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 glass border-t border-slate-200 p-3 no-print">
+        <a href="#register"
+            class="flex items-center justify-center gap-2 w-full bg-accent-500 hover:bg-accent-600 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all active:scale-98">
+            <i class="fas fa-graduation-cap"></i>
+            Register for Free Demo Class
+        </a>
+    </div>
 
     <!-- Main Container -->
-    <div class="container-width max-w-[210mm] mx-auto bg-white shadow-xl min-h-screen relative overflow-hidden">
-        
-        <!-- Header Section -->
-        <header class="text-center border-b-4 border-slate-800 relative bg-white">
+    <div
+        class="container-width max-w-[210mm] mx-auto bg-white shadow-2xl min-h-screen overflow-hidden md:mt-16 print:mt-0 print:shadow-none">
+
+        <!-- Hero Section -->
+        <header class="relative overflow-hidden">
+            <!-- Background gradient -->
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-primary-900"></div>
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\" 60\" height=\"60\" viewBox=\"0 0 60
+                60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg
+                fill=\"%239C92AC\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36
+                34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6
+                4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+
             <!-- Top Strip -->
-            <div class="bg-slate-900 text-white py-2 text-xs md:text-sm tracking-widest uppercase flex flex-col md:flex-row justify-between px-4 md:px-8 items-center gap-2">
-                <span>PMS Punjab Exclusive Session</span>
-                <span class="font-mono text-yellow-400 font-semibold">Online &amp; Recorded Classes Available</span>
+            <div class="relative bg-primary-600/90 text-white py-2 px-4 text-center">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-xs sm:text-sm">
+                    <span class="flex items-center gap-2">
+                        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                        <span class="font-medium">PMS Punjab Exclusive Session</span>
+                    </span>
+                    <span class="text-primary-100">|</span>
+                    <span class="flex items-center gap-2 text-accent-400 font-semibold">
+                        <i class="fas fa-video"></i>
+                        Online & Recorded Classes Available
+                    </span>
+                </div>
             </div>
 
-            <div class="p-6 md:p-10 pb-6">
-                <!-- Academy Logo (click to open LinkTree) -->
-                <div class="flex justify-center mb-4">
-                    <a href="https://csspmsgrammar.github.io/LinkTree/" target="_blank" rel="noopener noreferrer" class="inline-block">
-                        <img src="https://raw.githubusercontent.com/CSSPMSGRAMMAR/LinkTree/main/Images/AcademyLogo.PNG" alt="Academy Logo" class="h-24 md:h-28 w-auto object-contain shadow-lg rounded-full bg-white p-1">
+            <div class="relative px-6 py-10 md:px-12 md:py-16">
+                <!-- Floating Badge -->
+                <div
+                    class="inline-flex items-center gap-2 bg-accent-500/20 border border-accent-500/30 text-accent-400 text-sm font-medium px-4 py-2 rounded-full mb-6 animate-float">
+                    <i class="fas fa-clock"></i>
+                    <span>Next Batch Starting Soon — Limited Seats</span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight mb-6">
+                    Master PMS Punjab GK in 30 Days —
+                    <span class="text-primary-400">With Clarity, Confidence & Examiner-Oriented Strategy</span>
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-lg md:text-xl text-slate-300 leading-relaxed mb-8 max-w-3xl">
+                    Join <strong class="text-white">500+ aspirants</strong> who transformed their GK preparation from
+                    confusion to command. Live sessions, daily recordings & solved past papers — all in one focused
+                    course.
+                </p>
+
+                <!-- Quick Outcomes -->
+                <div class="flex flex-wrap gap-4 mb-10">
+                    <div
+                        class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
+                        <i class="fas fa-check-circle text-primary-400"></i>
+                        <span class="text-white text-sm font-medium">100% PMS Punjab GK Syllabus</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
+                        <i class="fas fa-check-circle text-primary-400"></i>
+                        <span class="text-white text-sm font-medium">Examiner-Oriented Answers</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
+                        <i class="fas fa-check-circle text-primary-400"></i>
+                        <span class="text-white text-sm font-medium">Recordings Provided</span>
+                    </div>
+                </div>
+
+                <!-- CTAs -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#register"
+                        class="inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-accent-500/30 transition-all hover:scale-105 text-lg">
+                        <i class="fas fa-graduation-cap"></i>
+                        Register for Free Demo Class
+                    </a>
+                    <a href="#demo"
+                        class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border border-white/20 transition-all">
+                        <i class="fas fa-play-circle"></i>
+                        Watch Demo Lecture
                     </a>
                 </div>
 
-                <!-- Urdu Quote -->
-                <p class="text-slate-500 text-sm mb-4 urdu-font font-bold">"علم بڑی طاقت ہے"</p>
-                
-                <!-- Course Title -->
-                <div class="inline-block border-y-2 border-slate-800 py-3 px-4 md:px-12 my-4 bg-slate-50">
-                    <h2 class="text-xl md:text-3xl font-bold uppercase tracking-wide text-slate-900">PMS Punjab – General Knowledge</h2>
-                    <p class="text-sm md:text-base text-slate-600 italic mt-1">Complete Concept-to-Command Course Outline</p>
-                </div>
-
                 <!-- Instructor Section -->
-                <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-6">
-                    <!-- Female Placeholder Photo -->
-                    <div class="w-16 h-16 rounded-full bg-slate-100 overflow-hidden border-2 border-slate-300 flex items-center justify-center">
-                        <i class="fas fa-person-dress text-3xl text-slate-400"></i>
-                    </div>
-                    <div class="text-center md:text-left">
-                        <p class="text-xs uppercase text-slate-500 font-bold tracking-wider">Instructor</p>
-                        <h3 class="text-xl font-bold text-slate-800 serif-font">Mam Nimra Khan</h3>
-                        <p class="text-xs text-slate-500 italic font-medium bg-slate-100 inline-block px-2 py-0.5 rounded mt-1">CSS / PMS Mentor</p>
+                <div class="mt-12 pt-8 border-t border-white/10">
+                    <div class="flex flex-col sm:flex-row items-center gap-6">
+                        <div class="relative">
+                            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 p-1">
+                                <div
+                                    class="w-full h-full rounded-full bg-slate-200 flex items-center justify-center overflow-hidden">
+                                    <i class="fas fa-person-dress text-4xl text-slate-400"></i>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute -bottom-1 -right-1 bg-primary-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="text-center sm:text-left">
+                            <p class="text-xs uppercase text-primary-400 font-bold tracking-wider mb-1">Your Instructor
+                            </p>
+                            <h3 class="text-2xl font-serif font-bold text-white mb-1">Mam Nimra Khan</h3>
+                            <p class="text-slate-400 text-sm">CSS / PMS Mentor • 2+ Years of Teaching Experience</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
 
+        <!-- Trust Badges Section -->
+        <section class="bg-white border-b border-slate-100 py-8 px-6 md:px-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                <div class="text-center">
+                    <div class="w-14 h-14 mx-auto mb-3 bg-primary-50 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-users text-2xl text-primary-600"></i>
+                    </div>
+                    <p class="text-2xl md:text-3xl font-bold text-slate-800">500+</p>
+                    <p class="text-sm text-slate-500">Students Enrolled</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-14 h-14 mx-auto mb-3 bg-primary-50 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-clipboard-check text-2xl text-primary-600"></i>
+                    </div>
+                    <p class="text-2xl md:text-3xl font-bold text-slate-800">100%</p>
+                    <p class="text-sm text-slate-500">Syllabus Coverage</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-14 h-14 mx-auto mb-3 bg-primary-50 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-video text-2xl text-primary-600"></i>
+                    </div>
+                    <p class="text-2xl md:text-3xl font-bold text-slate-800">Daily</p>
+                    <p class="text-sm text-slate-500">Recordings Provided</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-14 h-14 mx-auto mb-3 bg-primary-50 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-file-alt text-2xl text-primary-600"></i>
+                    </div>
+                    <p class="text-2xl md:text-3xl font-bold text-slate-800">10+</p>
+                    <p class="text-sm text-slate-500">Years Past Papers</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Main Content Area -->
         <main class="p-6 md:p-12">
-            
-            <!-- Session Overview -->
-            <section class="mb-10 bg-slate-50 p-6 rounded-lg border border-slate-200 print-break-inside">
-                <h3 class="text-xl font-bold text-slate-800 mb-4 border-l-4 border-slate-800 pl-3 uppercase">Session Overview</h3>
-                <p class="text-sm text-slate-700 italic mb-6">
-                    This course is designed to remove confusion, build confidence, and align your preparation exactly with the evolving PMS Punjab GK pattern.
-                </p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                    <div class="flex items-start gap-3">
-                        <i class="fas fa-clock text-slate-600 mt-1"></i>
-                        <div>
-                            <span class="font-bold text-slate-900 block">Course Duration</span>
-                            <span class="text-slate-600">One Month</span>
+
+            <!-- Session Overview Cards -->
+            <section class="mb-12 print-break-inside">
+                <div class="flex items-center gap-4 mb-8">
+                    <h2 class="text-2xl md:text-3xl font-serif font-bold text-slate-800">What You'll Get</h2>
+                    <div class="h-0.5 flex-grow bg-gradient-to-r from-primary-500 to-transparent"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Card 1 -->
+                    <div
+                        class="card-hover bg-gradient-to-br from-slate-50 to-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-calendar-days text-xl text-primary-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-lg mb-1">1 Month Intensive Course</h3>
+                                <p class="text-slate-600 text-sm">Daily interactive sessions designed to build concepts
+                                    systematically. No rushed content, no gaps.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex items-start gap-3">
-                        <i class="fas fa-calendar-check text-slate-600 mt-1"></i>
-                        <div>
-                            <span class="font-bold text-slate-900 block">Class Frequency</span>
-                            <span class="text-slate-600">Daily interactive sessions</span>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="card-hover bg-gradient-to-br from-slate-50 to-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-video text-xl text-primary-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-lg mb-1">Live + Recorded Classes</h3>
+                                <p class="text-slate-600 text-sm">Never miss a class. All sessions are recorded and
+                                    available within 24 hours. <span class="text-primary-600 font-medium">Watch anytime,
+                                        anywhere.</span></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex items-start gap-3">
-                        <i class="fas fa-video text-slate-600 mt-1"></i>
-                        <div>
-                            <span class="font-bold text-slate-900 block">Mode of Delivery</span>
-                            <span class="text-slate-600">Live Zoom classes + Recordings</span>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="card-hover bg-gradient-to-br from-slate-50 to-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-book-open text-xl text-primary-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-lg mb-1">Daily Study Materials</h3>
+                                <p class="text-slate-600 text-sm">Curated reference books, notes & handouts shared after
+                                    each session. Everything you need in one place.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex items-start gap-3">
-                        <i class="fas fa-book text-slate-600 mt-1"></i>
-                        <div>
-                            <span class="font-bold text-slate-900 block">Study Support</span>
-                            <span class="text-slate-600">Reference books shared daily</span>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="card-hover bg-gradient-to-br from-slate-50 to-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-pen-to-square text-xl text-accent-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-lg mb-1">Mock Tests & Past Papers</h3>
+                                <p class="text-slate-600 text-sm">Regular assessments with detailed past paper
+                                    discussions. <span class="text-accent-600 font-medium">Learn to write like a
+                                        qualifier.</span></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-span-1 md:col-span-2 flex items-start gap-3 bg-white p-3 rounded border border-slate-200">
-                        <i class="fas fa-clipboard-check text-slate-600 mt-1"></i>
-                        <div>
-                            <span class="font-bold text-slate-900 block">Assessment & Practice</span>
-                            <span class="text-slate-600">Regular mock testing and extensive solved past-paper discussions to develop examiner-oriented answers.</span>
-                        </div>
-                    </div>
+                </div>
+
+                <!-- Reassurance Microcopy -->
+                <div class="mt-6 text-center">
+                    <p class="text-sm text-slate-500">
+                        <i class="fas fa-shield-check text-primary-500 mr-2"></i>
+                        <span>All class recordings will be provided for your convenience</span>
+                    </p>
                 </div>
             </section>
 
             <!-- Demo Lecture Section -->
-            <section class="mb-10 bg-gradient-to-br from-slate-50 to-slate-100 p-6 rounded-lg border border-slate-200 print-break-inside">
-                <h3 class="text-xl font-bold text-slate-800 mb-4 border-l-4 border-slate-800 pl-3 uppercase flex items-center gap-2">
-                    <i class="fas fa-play-circle text-slate-700"></i>
-                    Demo Lecture: CRACK PMS GK
-                </h3>
-                <p class="text-sm text-slate-600 italic mb-4">
-                    Watch this comprehensive demo lecture to understand our teaching methodology and course approach.
-                </p>
-                <div class="relative w-full" style="padding-bottom: 56.25%;">
-                    <iframe class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg" src="https://www.youtube.com/embed/qGsNiVVTzcI" title="CRACK PMS GK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <section id="demo" class="mb-12 print-break-inside scroll-mt-24">
+                <div
+                    class="bg-gradient-to-br from-primary-50 via-slate-50 to-white p-6 md:p-8 rounded-2xl border border-primary-100">
+                    <!-- Header -->
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                        <div>
+                            <div
+                                class="inline-flex items-center gap-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 animate-pulse-slow">
+                                <span class="w-2 h-2 bg-white rounded-full"></span>
+                                3,200+ Views
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-slate-800 mb-2">
+                                See Exactly How Mam Nimra Khan Makes GK Easy
+                            </h3>
+                            <p class="text-slate-600">This 45-minute lecture covers the complete GK strategy that has
+                                helped 500+ students crack PMS Punjab.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video Embed -->
+                    <div class="relative w-full rounded-xl overflow-hidden shadow-xl mb-6"
+                        style="padding-bottom: 56.25%;">
+                        <iframe class="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/qGsNiVVTzcI"
+                            title="CRACK PMS GK - Demo Lecture by Mam Nimra Khan" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
+                        </iframe>
+                    </div>
+
+                    <!-- Post-Video CTA -->
+                    <div class="bg-white rounded-xl p-6 border border-slate-200 text-center">
+                        <p class="text-slate-600 mb-4">Liked what you saw? This is just a glimpse of what you'll learn.
+                        </p>
+                        <a href="#register"
+                            class="inline-flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-3 rounded-xl shadow-lg shadow-primary-500/25 transition-all hover:scale-105">
+                            <i class="fas fa-arrow-right"></i>
+                            Enroll in Full Course
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="mb-12 print-break-inside">
+                <div class="flex items-center gap-4 mb-8">
+                    <h2 class="text-2xl md:text-3xl font-serif font-bold text-slate-800">What Students Say</h2>
+                    <div class="h-0.5 flex-grow bg-gradient-to-r from-primary-500 to-transparent"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-gradient-to-br from-primary-50 to-white p-6 rounded-2xl border border-primary-100">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-accent-500"></i>
+                            <i class="fas fa-star text-accent-500"></i>
+                            <i class="fas fa-star text-accent-500"></i>
+                            <i class="fas fa-star text-accent-500"></i>
+                            <i class="fas fa-star text-accent-500"></i>
+                        </div>
+                        <p class="text-slate-700 italic mb-4">"Finally understood how to tackle GK systematically. Mam
+                            Nimra's approach is exactly what the examiner wants."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-primary-200 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user text-primary-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-slate-800 text-sm">PMS Aspirant</p>
+                                <p class="text-xs text-slate-500">Batch 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-gradient-to-br from-primary-50 to-white p-6 rounded-2xl border border-primary-100">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-accent-500"></i>
+                            <i class="fas fa-star text-accent-500"></i>
+                            <i class="fas fa-star text-accent-500"></i>
+                            <i class="fas fa-star text-accent-500"></i>
+                            <i class="fas fa-star text-accent-500"></i>
+                        </div>
+                        <p class="text-slate-700 italic mb-4">"The recorded classes were a lifesaver. I revised every
+                            concept before the exam. Worth every penny!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-primary-200 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user text-primary-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-slate-800 text-sm">CSS Aspirant</p>
+                                <p class="text-xs text-slate-500">Batch 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-gradient-to-br from-primary-50 to-white p-6 rounded-2xl border border-primary-100">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-accent-500"></i>
+                            <i class="fas fa-star text-accent-500"></i>
+                            <i class="fas fa-star text-accent-500"></i>
+                            <i class="fas fa-star text-accent-500"></i>
+                            <i class="fas fa-star text-accent-500"></i>
+                        </div>
+                        <p class="text-slate-700 italic mb-4">"From a 40 scorer to 65+ in GK. This course changed my
+                            entire approach to answering questions."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-primary-200 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user text-primary-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-slate-800 text-sm">PMS Qualifier</p>
+                                <p class="text-xs text-slate-500">Batch 2023</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <!-- Subject-Wise Syllabus -->
-            <section>
+            <section id="syllabus" class="mb-12 scroll-mt-24">
                 <div class="flex items-center gap-4 mb-8">
-                    <div class="h-1 flex-grow bg-slate-200"></div>
-                    <h2 class="text-2xl font-bold text-slate-800 uppercase tracking-widest text-center">Subject-Wise Coverage</h2>
-                    <div class="h-1 flex-grow bg-slate-200"></div>
+                    <h2 class="text-2xl md:text-3xl font-serif font-bold text-slate-800">Complete Syllabus Coverage</h2>
+                    <div class="h-0.5 flex-grow bg-gradient-to-r from-primary-500 to-transparent"></div>
                 </div>
 
-                <!-- Current Affairs -->
-                <div class="mb-8 print-break-inside">
-                    <div class="flex items-baseline gap-3 mb-2">
-                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
-                        <h3 class="text-lg font-bold text-slate-800 serif-font">1. Current Affairs</h3>
-                    </div>
-                    <p class="text-sm text-slate-500 italic mb-3 ml-5">A focused and analytical approach to national and international developments.</p>
-                    <ul class="ml-5 space-y-2 text-sm text-slate-700 list-disc list-outside pl-4 marker:text-slate-400">
-                        <li>Pakistan’s economic, political, and social challenges (water scarcity, governance, cyber laws).</li>
-                        <li>Pakistan’s relations with neighboring states, the Muslim world, and major global powers.</li>
-                        <li>International and regional organizations with their roles and relevance.</li>
-                        <li>Contemporary global issues: Peace/security, terrorism, climate change, food/energy crises, SDGs.</li>
-                        <li>Regional conflicts including Kashmir and Middle East dynamics.</li>
-                        <li>Globalization, non-state actors, NGOs, and INGOs.</li>
-                        <li>Cultural awareness including sports, literature, and arts.</li>
-                    </ul>
-                </div>
+                <p class="text-slate-600 italic mb-8 text-lg">
+                    Every topic covered with <span class="text-primary-600 font-semibold">examiner-oriented
+                        explanations</span> — no rote learning, only conceptual clarity.
+                </p>
 
-                <!-- History -->
-                <div class="mb-8 print-break-inside">
-                    <div class="flex items-baseline gap-3 mb-2">
-                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
-                        <h3 class="text-lg font-bold text-slate-800 serif-font">2. History: Pre & Post Partition</h3>
+                <!-- Syllabus Grid -->
+                <div class="space-y-6">
+
+                    <!-- Current Affairs -->
+                    <div
+                        class="print-break-inside bg-gradient-to-r from-blue-50 to-white p-6 rounded-2xl border-l-4 border-blue-500">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div
+                                class="w-10 h-10 bg-blue-500 text-white rounded-xl flex items-center justify-center font-bold text-lg">
+                                1</div>
+                            <h3 class="text-xl font-serif font-bold text-slate-800">Current Affairs</h3>
+                            <span
+                                class="ml-auto bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full">High
+                                Weightage</span>
+                        </div>
+                        <p class="text-sm text-slate-500 italic mb-4">A focused and analytical approach to national and
+                            international developments.</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-blue-500 mt-1"></i>Pakistan's
+                                economic, political, and social challenges</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-blue-500 mt-1"></i>Pakistan's
+                                relations with neighboring states & global powers</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-check text-blue-500 mt-1"></i>International and regional organizations
+                            </li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-check text-blue-500 mt-1"></i>Contemporary global issues: Peace,
+                                terrorism, climate</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-blue-500 mt-1"></i>Regional
+                                conflicts including Kashmir & Middle East</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-check text-blue-500 mt-1"></i>Globalization, non-state actors, NGOs &
+                                INGOs</li>
+                        </ul>
                     </div>
-                    <p class="text-sm text-slate-500 italic mb-3 ml-5">A smooth conceptual journey from early Islamic history to modern Pakistan.</p>
-                    <div class="ml-5 grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-slate-50 p-4 rounded border-l-4 border-slate-400">
-                            <h4 class="font-bold text-sm text-slate-800 mb-2">Pre-Partition</h4>
-                            <ul class="text-sm text-slate-700 space-y-1 list-disc list-inside marker:text-slate-400">
-                                <li>Muslim rule in Subcontinent</li>
-                                <li>War of Independence</li>
-                                <li>Freedom Movement developments</li>
-                                <li>Key political milestones</li>
+
+                    <!-- History -->
+                    <div
+                        class="print-break-inside bg-gradient-to-r from-amber-50 to-white p-6 rounded-2xl border-l-4 border-amber-500">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div
+                                class="w-10 h-10 bg-amber-500 text-white rounded-xl flex items-center justify-center font-bold text-lg">
+                                2</div>
+                            <h3 class="text-xl font-serif font-bold text-slate-800">History: Pre & Post Partition</h3>
+                        </div>
+                        <p class="text-sm text-slate-500 italic mb-4">A smooth conceptual journey from early Islamic
+                            history to modern Pakistan.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-xl border border-amber-200">
+                                <h4 class="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                                    <i class="fas fa-landmark text-amber-500"></i> Pre-Partition
+                                </h4>
+                                <ul class="space-y-2 text-sm text-slate-700">
+                                    <li class="flex items-start gap-2"><i
+                                            class="fas fa-check text-amber-500 mt-1"></i>Muslim rule in Subcontinent
+                                    </li>
+                                    <li class="flex items-start gap-2"><i
+                                            class="fas fa-check text-amber-500 mt-1"></i>War of Independence</li>
+                                    <li class="flex items-start gap-2"><i
+                                            class="fas fa-check text-amber-500 mt-1"></i>Freedom Movement developments
+                                    </li>
+                                    <li class="flex items-start gap-2"><i
+                                            class="fas fa-check text-amber-500 mt-1"></i>Key political milestones</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-amber-200">
+                                <h4 class="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                                    <i class="fas fa-flag text-amber-600"></i> Post-Partition
+                                </h4>
+                                <ul class="space-y-2 text-sm text-slate-700">
+                                    <li class="flex items-start gap-2"><i
+                                            class="fas fa-check text-amber-500 mt-1"></i>Post-independence political
+                                        evolution</li>
+                                    <li class="flex items-start gap-2"><i
+                                            class="fas fa-check text-amber-500 mt-1"></i>Governance phases</li>
+                                    <li class="flex items-start gap-2"><i
+                                            class="fas fa-check text-amber-500 mt-1"></i>Constitutional development</li>
+                                    <li class="flex items-start gap-2"><i
+                                            class="fas fa-check text-amber-500 mt-1"></i>Comparative analysis of
+                                        Amendments</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Pakistan History Visual -->
+                        <div class="mt-4 flex justify-center">
+                            <img src="picture1.png" alt="Pakistan History Timeline"
+                                class="w-full max-w-md rounded-xl shadow-md border border-slate-200 object-contain"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Geography -->
+                    <div
+                        class="print-break-inside bg-gradient-to-r from-green-50 to-white p-6 rounded-2xl border-l-4 border-green-500">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div
+                                class="w-10 h-10 bg-green-500 text-white rounded-xl flex items-center justify-center font-bold text-lg">
+                                3</div>
+                            <h3 class="text-xl font-serif font-bold text-slate-800">Geography of Pakistan</h3>
+                            <span
+                                class="ml-auto bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">Scoring
+                                Subject</span>
+                        </div>
+                        <p class="text-sm text-slate-500 italic mb-4">Geography taught as a scoring subject, not
+                            memorization.</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i>Physical
+                                features: Mountains, rivers, dams, climate zones</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i>Borders,
+                                strategic location & natural resources</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-check text-green-500 mt-1"></i>Infrastructure development &
+                                connectivity</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sciences Row -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Physical Sciences -->
+                        <div
+                            class="print-break-inside bg-gradient-to-r from-purple-50 to-white p-6 rounded-2xl border-l-4 border-purple-500">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="w-10 h-10 bg-purple-500 text-white rounded-xl flex items-center justify-center font-bold">
+                                    4</div>
+                                <h3 class="text-lg font-serif font-bold text-slate-800">Physical Sciences</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700">
+                                <li class="flex items-start gap-2"><i
+                                        class="fas fa-check text-purple-500 mt-1"></i>Universe, astronomy, space
+                                    terminology</li>
+                                <li class="flex items-start gap-2"><i
+                                        class="fas fa-check text-purple-500 mt-1"></i>Natural disasters & risk
+                                    management</li>
+                                <li class="flex items-start gap-2"><i
+                                        class="fas fa-check text-purple-500 mt-1"></i>Energy resources & sustainability
+                                </li>
+                                <li class="flex items-start gap-2"><i class="fas fa-check text-purple-500 mt-1"></i>Core
+                                    physics & chemistry concepts</li>
                             </ul>
                         </div>
-                        <div class="bg-slate-50 p-4 rounded border-l-4 border-slate-800">
-                            <h4 class="font-bold text-sm text-slate-800 mb-2">Post-Partition</h4>
-                            <ul class="text-sm text-slate-700 space-y-1 list-disc list-inside marker:text-slate-400">
-                                <li>Post-independence political evolution</li>
-                                <li>Governance phases</li>
-                                <li>Constitutional development</li>
-                                <li>Comparative analysis of Amendments</li>
+
+                        <!-- Biological Sciences -->
+                        <div
+                            class="print-break-inside bg-gradient-to-r from-pink-50 to-white p-6 rounded-2xl border-l-4 border-pink-500">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="w-10 h-10 bg-pink-500 text-white rounded-xl flex items-center justify-center font-bold">
+                                    5</div>
+                                <h3 class="text-lg font-serif font-bold text-slate-800">Biological Sciences</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700">
+                                <li class="flex items-start gap-2"><i class="fas fa-check text-pink-500 mt-1"></i>Cell
+                                    structure & biological processes</li>
+                                <li class="flex items-start gap-2"><i
+                                        class="fas fa-check text-pink-500 mt-1"></i>Bio-molecules and enzymes</li>
+                                <li class="flex items-start gap-2"><i class="fas fa-check text-pink-500 mt-1"></i>Human
+                                    anatomy & organ systems</li>
+                                <li class="flex items-start gap-2"><i
+                                        class="fas fa-check text-pink-500 mt-1"></i>Diseases, vitamins, vaccines</li>
                             </ul>
                         </div>
                     </div>
-                    <!-- Pakistan History Visual -->
-                    <div class="mt-4 ml-0 md:ml-5 px-2 flex justify-center">
-                        <img src="picture1.png" alt="Pakistan History Timeline" class="w-full max-w-md md:max-h-64 h-auto rounded-lg shadow-md border border-slate-200 object-contain">
-                    </div>
-                </div>
 
-                <!-- Geography -->
-                <div class="mb-8 print-break-inside">
-                    <div class="flex items-baseline gap-3 mb-2">
-                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
-                        <h3 class="text-lg font-bold text-slate-800 serif-font">3. Geography of Pakistan</h3>
-                    </div>
-                    <p class="text-sm text-slate-500 italic mb-3 ml-5">Geography taught as a scoring subject, not memorization.</p>
-                    <ul class="ml-5 space-y-2 text-sm text-slate-700 list-disc list-outside pl-4 marker:text-slate-400">
-                        <li>Physical features: Mountains, rivers, dams, passes, and climate zones.</li>
-                        <li>Borders, strategic location, and natural resources.</li>
-                        <li>Infrastructure development with emphasis on connectivity.</li>
-                    </ul>
-                </div>
-
-                <!-- Two Column Section for Sciences -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 print-break-inside">
-                    
-                    <!-- Physical Sciences -->
-                    <div>
-                        <div class="flex items-baseline gap-3 mb-2">
-                            <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
-                            <h3 class="text-lg font-bold text-slate-800 serif-font">4. Physical Sciences</h3>
+                    <!-- Environment & Food + CS & IT Row -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Environment & Food -->
+                        <div
+                            class="print-break-inside bg-gradient-to-r from-teal-50 to-white p-6 rounded-2xl border-l-4 border-teal-500">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="w-10 h-10 bg-teal-500 text-white rounded-xl flex items-center justify-center font-bold">
+                                    6</div>
+                                <h3 class="text-lg font-serif font-bold text-slate-800">Environment & Food</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700">
+                                <li class="flex items-start gap-2"><i
+                                        class="fas fa-check text-teal-500 mt-1"></i>Ecosystems, biodiversity, climate
+                                    change</li>
+                                <li class="flex items-start gap-2"><i
+                                        class="fas fa-check text-teal-500 mt-1"></i>International environmental
+                                    conventions</li>
+                                <li class="flex items-start gap-2"><i
+                                        class="fas fa-check text-teal-500 mt-1"></i>Nutrition, preservation, food
+                                    security</li>
+                            </ul>
                         </div>
-                        <p class="text-xs text-slate-500 italic mb-3 ml-5">Simple, exam-oriented explanation.</p>
-                        <ul class="ml-5 space-y-1 text-sm text-slate-700 list-disc list-outside pl-4 marker:text-slate-400">
-                            <li>Universe, astronomy, space terminology.</li>
-                            <li>Natural disasters & risk management.</li>
-                            <li>Energy resources and sustainability.</li>
-                            <li>Core physics and chemistry concepts.</li>
-                            <li>Minerals and mining in Pakistan.</li>
-                        </ul>
-                    </div>
 
-                    <!-- Biological Sciences -->
-                    <div>
-                        <div class="flex items-baseline gap-3 mb-2">
-                            <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
-                            <h3 class="text-lg font-bold text-slate-800 serif-font">5. Biological Sciences</h3>
+                        <!-- CS & IT -->
+                        <div
+                            class="print-break-inside bg-gradient-to-r from-indigo-50 to-white p-6 rounded-2xl border-l-4 border-indigo-500">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="w-10 h-10 bg-indigo-500 text-white rounded-xl flex items-center justify-center font-bold">
+                                    7</div>
+                                <h3 class="text-lg font-serif font-bold text-slate-800">Computer Science & IT</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-indigo-100 text-indigo-700 text-xs font-medium px-3 py-1.5 rounded-lg">Hardware
+                                    & Software</span>
+                                <span
+                                    class="bg-indigo-100 text-indigo-700 text-xs font-medium px-3 py-1.5 rounded-lg">Office
+                                    Tools</span>
+                                <span
+                                    class="bg-indigo-100 text-indigo-700 text-xs font-medium px-3 py-1.5 rounded-lg">Networking</span>
+                                <span
+                                    class="bg-indigo-100 text-indigo-700 text-xs font-medium px-3 py-1.5 rounded-lg">Telecommunications</span>
+                            </div>
                         </div>
-                        <p class="text-xs text-slate-500 italic mb-3 ml-5">Practical understanding of life sciences.</p>
-                        <ul class="ml-5 space-y-1 text-sm text-slate-700 list-disc list-outside pl-4 marker:text-slate-400">
-                            <li>Cell structure & biological processes.</li>
-                            <li>Bio-molecules and enzymes.</li>
-                            <li>Plant and animal life.</li>
-                            <li>Human anatomy and organ systems.</li>
-                            <li>Diseases, vitamins, vaccines.</li>
-                        </ul>
+                    </div>
+
+                    <!-- Mathematics + GK Wrap-Up Row -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Mathematics -->
+                        <div
+                            class="print-break-inside bg-gradient-to-r from-orange-50 to-white p-6 rounded-2xl border-l-4 border-orange-500">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="w-10 h-10 bg-orange-500 text-white rounded-xl flex items-center justify-center font-bold">
+                                    8</div>
+                                <h3 class="text-lg font-serif font-bold text-slate-800">Basic Mathematics & Logic</h3>
+                            </div>
+                            <p class="text-xs text-slate-500 italic mb-3">Confidence-building numerical skills with
+                                smart shortcuts.</p>
+                            <ul class="space-y-2 text-sm text-slate-700">
+                                <li class="flex items-start gap-2"><i
+                                        class="fas fa-check text-orange-500 mt-1"></i>Arithmetic, algebra, geometry</li>
+                                <li class="flex items-start gap-2"><i
+                                        class="fas fa-check text-orange-500 mt-1"></i>Analytical & logical reasoning
+                                </li>
+                                <li class="flex items-start gap-2"><i
+                                        class="fas fa-check text-orange-500 mt-1"></i>Mental math techniques</li>
+                            </ul>
+                        </div>
+
+                        <!-- GK Wrap-Up -->
+                        <div
+                            class="print-break-inside bg-gradient-to-r from-yellow-50 to-white p-6 rounded-2xl border-l-4 border-yellow-500">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="w-10 h-10 bg-yellow-500 text-white rounded-xl flex items-center justify-center font-bold">
+                                    9</div>
+                                <h3 class="text-lg font-serif font-bold text-slate-800">General Knowledge Wrap-Up</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700">
+                                <li class="flex items-start gap-2"><i
+                                        class="fas fa-check text-yellow-500 mt-1"></i>Renowned scientists & inventors
+                                </li>
+                                <li class="flex items-start gap-2"><i
+                                        class="fas fa-check text-yellow-500 mt-1"></i>Major discoveries, laws & theories
+                                </li>
+                                <li class="flex items-start gap-2"><i
+                                        class="fas fa-check text-yellow-500 mt-1"></i>Measurement units & instruments
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Environment & Food -->
-                <div class="mb-8 print-break-inside">
-                    <div class="flex items-baseline gap-3 mb-2">
-                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
-                        <h3 class="text-lg font-bold text-slate-800 serif-font">6. Environment & Food Sciences</h3>
-                    </div>
-                    <ul class="ml-5 space-y-2 text-sm text-slate-700 list-disc list-outside pl-4 marker:text-slate-400">
-                        <li>Ecosystems, biodiversity, climate change, pollution, and ozone depletion.</li>
-                        <li>International environmental conventions and agreements.</li>
-                        <li>Food science: Nutrition, preservation, adulteration, and global hunger.</li>
-                    </ul>
-                </div>
-
-                <!-- CS & IT -->
-                <div class="mb-8 print-break-inside">
-                    <div class="flex items-baseline gap-3 mb-2">
-                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
-                        <h3 class="text-lg font-bold text-slate-800 serif-font">7. Computer Science & IT</h3>
-                    </div>
-                    <div class="ml-5 flex flex-wrap gap-2 text-sm">
-                        <span class="bg-slate-100 px-3 py-1 rounded text-slate-700 border border-slate-200">Hardware & Software</span>
-                        <span class="bg-slate-100 px-3 py-1 rounded text-slate-700 border border-slate-200">Office Tools</span>
-                        <span class="bg-slate-100 px-3 py-1 rounded text-slate-700 border border-slate-200">Networking & Social Media</span>
-                        <span class="bg-slate-100 px-3 py-1 rounded text-slate-700 border border-slate-200">Telecommunication (GPS/Fiber)</span>
-                    </div>
-                </div>
-
-                <!-- Mathematics -->
-                <div class="mb-8 print-break-inside">
-                    <div class="flex items-baseline gap-3 mb-2">
-                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
-                        <h3 class="text-lg font-bold text-slate-800 serif-font">8. Basic Mathematics & Logic</h3>
-                    </div>
-                    <p class="text-sm text-slate-500 italic mb-3 ml-5">Confidence-building numerical skills with smart shortcuts.</p>
-                    <ul class="ml-5 space-y-2 text-sm text-slate-700 list-disc list-outside pl-4 marker:text-slate-400">
-                        <li>Arithmetic, algebra, geometry, and percentages.</li>
-                        <li>Analytical and logical reasoning.</li>
-                        <li>Mental math techniques for speed and accuracy.</li>
-                        <li>Introductory statistics.</li>
-                    </ul>
-                </div>
-
-                <!-- GK Wrap Up -->
-                <div class="mb-8 print-break-inside">
-                    <div class="flex items-baseline gap-3 mb-2">
-                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
-                        <h3 class="text-lg font-bold text-slate-800 serif-font">9. General Knowledge Wrap-Up</h3>
-                    </div>
-                    <div class="ml-5 bg-yellow-50 p-4 border border-yellow-200 rounded text-slate-700 text-sm">
-                        <ul class="list-disc list-inside marker:text-yellow-600">
-                            <li>Renowned scientists and inventors.</li>
-                            <li>Major discoveries, laws, and theories.</li>
-                            <li>Measurement units and scientific instruments.</li>
-                        </ul>
-                    </div>
-                </div>
-
             </section>
+
+            <!-- FAQ Section -->
+            <section class="mb-12 print-break-inside">
+                <div class="flex items-center gap-4 mb-8">
+                    <h2 class="text-2xl md:text-3xl font-serif font-bold text-slate-800">Frequently Asked Questions</h2>
+                    <div class="h-0.5 flex-grow bg-gradient-to-r from-primary-500 to-transparent"></div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-slate-800 mb-2 flex items-start gap-3">
+                            <i class="fas fa-circle-question text-primary-500 mt-1"></i>
+                            What if I miss a live class?
+                        </h4>
+                        <p class="text-slate-600 text-sm pl-8">All classes are recorded and uploaded within 24 hours.
+                            You can watch at your convenience anytime during the course.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-slate-800 mb-2 flex items-start gap-3">
+                            <i class="fas fa-circle-question text-primary-500 mt-1"></i>
+                            Will I get access to recordings?
+                        </h4>
+                        <p class="text-slate-600 text-sm pl-8">Yes! All class recordings will be provided so you can watch and revise at your convenience.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-slate-800 mb-2 flex items-start gap-3">
+                            <i class="fas fa-circle-question text-primary-500 mt-1"></i>
+                            Is this course suitable for beginners?
+                        </h4>
+                        <p class="text-slate-600 text-sm pl-8">Absolutely! The course is designed to take you from
+                            basics to advanced. No prior GK preparation required.</p>
+                    </div>
+                </div>
+            </section>
+
         </main>
 
+        <!-- Registration Section -->
+        <section id="register"
+            class="bg-gradient-to-br from-primary-600 to-primary-800 text-white p-8 md:p-12 scroll-mt-20">
+            <div class="max-w-2xl mx-auto text-center">
+                <div
+                    class="inline-flex items-center gap-2 bg-white/20 text-white text-sm font-medium px-4 py-2 rounded-full mb-6">
+                    <i class="fas fa-fire"></i>
+                    <span>Only 30 seats per batch — Register now!</span>
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Ready to Master PMS GK?</h2>
+                <p class="text-primary-100 text-lg mb-8">Start with a free demo class. No credit card required.</p>
+
+                <!-- Contact Options -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <p class="text-sm text-primary-200 mb-6">Contact us to register for the upcoming batch:</p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://wa.me/923265511188" target="_blank"
+                            class="inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-4 rounded-xl shadow-lg transition-all hover:scale-105">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                            <span>Message on WhatsApp</span>
+                        </a>
+                        <a href="tel:+923265511188"
+                            class="inline-flex items-center justify-center gap-3 bg-blue-500 hover:bg-blue-600 text-white font-bold px-6 py-4 rounded-xl shadow-lg transition-all hover:scale-105">
+                            <i class="fas fa-phone text-xl"></i>
+                            <span>Call Now</span>
+                        </a>
+                    </div>
+
+                    <p class="mt-6 text-sm text-primary-200">
+                        <i class="fas fa-shield-check mr-2"></i>
+                        Your spot is reserved only after confirmation
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <!-- Footer: Why This Course Works -->
-        <footer class="bg-slate-900 text-white p-6 md:p-12 print:bg-slate-900 print:text-white">
+        <footer class="bg-slate-900 text-white p-8 md:p-12 print:bg-slate-900 print:text-white">
             <div class="border-b border-slate-700 pb-8 mb-8">
-                <h3 class="text-2xl font-bold mb-4 serif-font text-yellow-500">Why This Course Works</h3>
-                <p class="text-slate-300 leading-relaxed text-sm md:text-base">
-                    This program is not about cramming facts — it’s about understanding patterns, mastering concepts, and answering like a PMS qualifier. Whether you’re starting fresh or restructuring your preparation, this course is built to make you feel prepared, confident, and in control.
+                <h3 class="text-2xl font-serif font-bold mb-4 text-primary-400">Why This Course Works</h3>
+                <p class="text-slate-300 leading-relaxed">
+                    This program is not about cramming facts — it's about <strong class="text-white">understanding
+                        patterns, mastering concepts, and answering like a PMS qualifier</strong>. Whether you're
+                    starting fresh or restructuring your preparation, this course is built to make you feel prepared,
+                    confident, and in control.
                 </p>
             </div>
-            
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="text-center md:text-left">
-                    <p class="text-xs uppercase tracking-widest text-slate-500 mb-1">Registration &amp; Queries</p>
-                    <p class="text-slate-300 text-sm md:text-base">Reach out via official channels for enrollment details.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-white mb-3">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#demo" class="hover:text-primary-400 transition-colors">Watch Demo Lecture</a></li>
+                        <li><a href="#syllabus" class="hover:text-primary-400 transition-colors">View Syllabus</a></li>
+                        <li><a href="#register" class="hover:text-primary-400 transition-colors">Register Now</a></li>
+                    </ul>
                 </div>
-                
+                <div>
+                    <h4 class="font-bold text-white mb-3">Contact</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><i class="fab fa-whatsapp text-green-400 mr-2"></i>WhatsApp: +92 326 5511188</li>
+                        <li><i class="fas fa-phone text-blue-400 mr-2"></i>Call: +92 326 5511188</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-3">Resources</h4>
+                    <div class="space-y-3">
+                        <a href="https://csspmsgrammar.github.io/LinkTree/" target="_blank"
+                            class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold px-4 py-2.5 rounded-lg transition-all hover:scale-105 shadow-md text-sm">
+                            <i class="fas fa-link"></i>
+                            <span>Visit Our LinkTree</span>
+                        </a>
+                        <p class="text-sm text-slate-400">
+                            <i class="fas fa-video mr-2"></i>Recordings Provided
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-slate-700">
+                <div class="flex items-center gap-3">
+                    <img src="https://raw.githubusercontent.com/CSSPMSGRAMMAR/LinkTree/main/Images/AcademyLogo.PNG"
+                        alt="CSSPMS.GRAMMAR Logo" class="h-10 w-10 rounded-full">
+                    <span class="font-serif font-bold text-lg">CSSPMS.GRAMMAR</span>
+                </div>
                 <div class="text-center md:text-right">
-                    <p class="text-slate-400 text-sm">© 2025 CSSPMS.GRAMMAR</p>
-                    <p class="text-xs text-slate-600">All rights reserved.</p>
+                    <p class="text-slate-400 text-sm">© 2025 CSSPMS.GRAMMAR. All rights reserved.</p>
+                    <p class="text-xs text-slate-600">"علم بڑی طاقت ہے"</p>
                 </div>
             </div>
         </footer>
 
     </div>
+
+    <!-- Spacer for mobile sticky CTA -->
+    <div class="h-20 md:hidden no-print"></div>
+
 </body>
+
 </html>
